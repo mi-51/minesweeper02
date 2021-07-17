@@ -184,8 +184,8 @@ function ゲーム盤の表示の更新() {
         }
       }
       // (x, y)のマスの左上の座標を計算する
-      const マスの位置x = 要素オブジェクト;
-      const マスの位置y = 要素オブジェクト;
+      const マスの位置x = ゲーム盤の位置x + x;
+      const マスの位置y = ゲーム盤の位置y + y;
       // マスを塗りつぶし、枠を描画する処理
       ctx.beginPath();
       ctx.fillStyle = 塗りつぶしの色;
@@ -201,11 +201,11 @@ function ゲーム盤の表示の更新() {
       ctx.stroke();
       // マスに文字列を描画する処理
       ctx.fillStyle = "black";
-      ctx.font = "20px Century";
+      ctx.font = "16px Century";
       // 文字列の描画位置は、文字列の左下の座標なので、
       // マスの真ん中に表示するために位置を少しずらす必要がある
       // ？？？は試行錯誤して調整すること
-      ctx.fillText(表示する文字, マスの位置x + 10, マスの位置y + 10);
+      ctx.fillText(表示する文字, マスの位置x + 0, マスの位置y + 0);
     }
   }
 
